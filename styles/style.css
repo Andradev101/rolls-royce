@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Tomorrow';
+}
+/*header*/
+#logo{
+    width: 4vh;
+}
+header, footer{
+    display: flex;
+    background-color: aqua;
+    align-items: center;
+    justify-content: space-evenly;
+}
+header a, footer a{
+    font-size: 1.2vw;
+    text-decoration: none;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+}
