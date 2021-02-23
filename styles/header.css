@@ -1,10 +1,8 @@
 #logo img{
-    padding: 10px 0 0 0;
     width: 25px
 }
 header, footer{
     height: 50px;
-    position: fixed;
     width: 100%;
     z-index: 1000;
 
@@ -19,18 +17,18 @@ header:hover{
 }
 footer{
     bottom: 0;
+    position: fixed;
 }
 footer:hover{
     background-color: rgba(0, 0, 0, 1);
 }
 header a, footer a{
-    padding: 0 50px;
-    font-size: 30px;
+    font-size: clamp(15px, 1vw, 1.5vw);
     text-decoration: none;
     color: rgba(255, 255, 255, 0.5);
     transition: all 0.1s;
 }
 header a:hover, footer a:hover{
     color: white;
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
