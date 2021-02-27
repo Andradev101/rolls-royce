@@ -9,11 +9,8 @@ header, footer{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: rgba(0, 0, 0, 0.0);
+    background-color: rgba(0, 0, 0, 0.7);
     transition: all 0.3s;
-}
-header:hover{
-    background-color: rgba(0, 0, 0, 0.6);
 }
 footer{
     bottom: 0;

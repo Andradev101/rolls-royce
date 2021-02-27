@@ -8,11 +8,19 @@ const modeldesc = document.querySelectorAll(".model .desc");
 const medialink = document.querySelectorAll(".media a");
 const html = document.getElementsByTagName("html");
 const logoimg = document.getElementsByTagName("img");
+const dealerdiv = document.querySelectorAll(".dealer");
 
 //add video to the background
-    setInterval(() => {
+    if (location.href === 'http://127.0.0.1:5500/views/index.html') { //gotta change this later, dunno how yet.
+        setInterval(() => {
+            bgcolor[0].style.backgroundColor= "rgba(0, 0, 0, 0.7)"
+        }, 1000);
+    } else {
+        console.log("aaa")
+        bgcolor[0].setAttribute("style", "transition: all 0.5s");
         bgcolor[0].style.backgroundColor= "rgba(0, 0, 0, 0.7)"
-    }, 1000);
+    }
+
     
     function addVideo(){
         var random = Math.floor(Math.random() * 4);
@@ -37,7 +45,7 @@ const logoimg = document.getElementsByTagName("img");
 
 //hover event listeners for elements within model
     for (let i = 0; i < modeldesc.length; i++) {
-        modeldiv[i].addEventListener("mouseenter", ()=>{modeldesc[i].style.top = "10px"});
+        modeldiv[i].addEventListener("mouseenter", ()=>{modeldesc[i].style.top = "50px"});
         modeldiv[i].addEventListener("mouseenter", ()=>{modeldesc[i].style.backgroundColor = "rgba(255, 255, 255, 0.9)"});
         modeldiv[i].addEventListener("mouseleave", ()=>{modeldesc[i].style.top = "200px"});
         modeldiv[i].addEventListener("mouseleave", ()=>{modeldesc[i].style.backgroundColor = "rgba(255, 255, 255, 0.5)"});
@@ -47,4 +55,10 @@ const logoimg = document.getElementsByTagName("img");
         var item = medialink[i];
         var delay = i*0.1;
         medialink[i].style.animationDelay=delay+"s"
+    }
+
+    for (let i = 0; i < dealerdiv.length; ++i) {
+        var item = dealerdiv[i];
+        var delay = i*0.1;
+        dealerdiv[i].style.animationDelay=delay+"s"
     }
